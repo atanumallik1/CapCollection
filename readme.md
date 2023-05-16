@@ -8,6 +8,9 @@
 ## API 
 - Stop a Service from exposure 
    -  `@cds.serve.ignore`
+- dont create DB
+   - `	@cds.persistence.skip`
+-     
 
 ## DB Interaction 
 - Bulk API
