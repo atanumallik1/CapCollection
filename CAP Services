@@ -1,0 +1,14 @@
+# LEarn about CAP Services in JAVA
+## Emit() sv Run()
+
+Services dispatch events to `Event Handlers`, which implement the behaviour of the service. A service can process synchronous as well as asynchronous events and offers a user-friendly API layer around these events.
+Every service implements the Service interface, which offers generic event processing capabilities through its emit(EventContext) method. The Event Context contains information about the event and its parameters. The emit method takes care of dispatching an Event Context to all event handlers registered on the respective event and is the central API to process asynchronous and synchronous events.
+
+Usually service implementations extend the Service interface to provide a custom, user-friendly API layer on top of the emit() method. Examples are the Application Service, Persistence Service, and Remote Service, which offer a common CQN query execution API for their CRUD events. However, also technical components are implemented as services, for example the AuthorizationService or the MessagingService.
+
+
+
+
+
+## Reference 
+- https://cap.cloud.sap/docs/java/consumption-api#an-event-based-api
