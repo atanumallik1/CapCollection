@@ -8,7 +8,8 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
   - Handling error messages using application lifecycle handler https://cap.cloud.sap/docs/java/indicating-errors#errorhandler
 - Persistance Service APIs
   - https://cap.cloud.sap/docs/java/persistence-services#default-persistence-service  
-
+## Working with CDS mdoel 
+- https://cap.cloud.sap/docs/java/reflection-api#get-all-elements-with-given-annotation
 ## API 
 - Stop a Service from exposure 
    -  `@cds.serve.ignore`
