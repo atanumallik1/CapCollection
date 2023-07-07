@@ -20,6 +20,7 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
 ## REst Protocol
 - https://cap.cloud.sap/docs/node.js/cds-serve#protocol
 - https://cap.cloud.sap/docs/advanced/troubleshooting#how-can-i-expose-custom-rest-apis-with-cap
+- Protocol specific endpoint : https://cap.cloud.sap/docs/releases/jun23#new-protocol-specific-service-endpoints
 ## Open Types 
 - https://cap.cloud.sap/docs/releases/apr23#open-types-in-odata-v4
 
