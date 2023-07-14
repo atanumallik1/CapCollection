@@ -139,6 +139,28 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
     - Instance-Based Authorization
     - Enforcement API & Custom Handlers
 
+## ChangeSet Contexts : Working with DB transactions 
+ChangeSet Contexts are an abstraction around transactions. This chapter describes how ChangeSets are related to transactions and how to manage them with the CAP Java SDK.
+
+- https://cap.cloud.sap/docs/java/changeset-contexts
+
+
+ChangeSet Contexts are used in the CAP Java SDK as a light-weight abstraction around transactions. They are represented by the ChangeSetContext interface. ChangeSet Contexts only define transactional boundaries, but do not define themselves how a transaction is started, committed or rolled back. They are therefore well suited to plug in different kinds of transaction managers to integrate with different kinds of transactional resources.
+
+The currently active ChangeSet Context can be accessed from the Event Context: `context.getChangeSetContext();`
+
+- Defining ChangeSet Contexts
+- Reacting on ChangeSets
+- Cancelling ChangeSets
+- Database Transactions in Spring Boot
+  - Ref: https://cap.cloud.sap/docs/java/changeset-contexts#database-transactions-in-spring-boot
+  - Database transactions in CAP are always started and initialized lazily during the first interaction with the Persistence Service. When running in Spring Boot, CAP Java completely integrates with Spring's transaction management. As a result you can use Spring's @Transactional annotations or the TransactionTemplate to control transactional boundaries as an alternative to using the ChangeSet Context.
+
+  - This integration with Spring's transaction management also comes in handy, in case you need to perform plain JDBC connections in your event handlers. This might be necessary, when calling SAP HANA procedures or selecting from tables not covered by CDS and the Persistence Service. 
+- Setting Session Context Variables
+  -  You can leverage the simplified access to JDBC APIs in Spring Boot to set session context variables on the JDBC connection. When setting these variables this way, they will also influence statements executed by CAP itself through the Persistence Service APIs.
+  -  Ref: https://cap.cloud.sap/docs/java/changeset-contexts#setting-session-context-variables 
+
 
   
 
