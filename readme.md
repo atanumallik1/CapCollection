@@ -114,4 +114,28 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
 ## Remote Service consumption 
 - https://cap.cloud.sap/docs/java/remote-services
 - Destination configuration
-  - https://cap.cloud.sap/docs/java/remote-services#register-destinations ( Oauth 2, Token forwarding..) 
+  - https://cap.cloud.sap/docs/java/remote-services#register-destinations ( Oauth 2, Token forwarding..)
+ 
+## Security 
+- https://cap.cloud.sap/docs/java/security
+  - Authentication
+  - Configure XSUAA Authentication
+  - Configure IAS Authentication
+  - Configure IAS and XSUAA Authentication (Hybrid)
+  - Automatic Spring Boot Security Configuration
+  - Setting the Authentication Mode
+    - never
+    - model-relaxed
+    - model-strict
+    - always 
+  - Customizing Spring Boot Security Configuration
+  - Custom Authentication
+  - Mock User Authentication with Spring Boot
+    - Preconfigured Mock Users
+    - Explicitly Defined Mock Users
+  - Mock Tenants
+  - Authorization
+
+
+
+  
