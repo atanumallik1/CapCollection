@@ -56,7 +56,62 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
 ### Application Configuration
 - https://cap.cloud.sap/docs/java/development/#application-configuration
 - This section describes how to configure applications. CAP Java applications can fully leverage Spring Boot's capabilities for Externalized Configuration. This enables you to define multiple configuration profiles for different scenarios, like local development and cloud deployment.
+- For a first introduction, have a look at our sample application and the configuration profiles we added there.
+- Now, that you’re familiar with how to configure your application, start to create your own application configuration. See the full list of CDS properties as a reference.
+### Kyma based consumption 
+- https://cap.cloud.sap/docs/java/development/#prepare-your-cap-application
+- Explains how to bind to Kubernetes volumes
 
-For a first introduction, have a look at our sample application and the configuration profiles we added there.
+## Spring boot integration
+- https://cap.cloud.sap/docs/java/development/#spring-boot-integration
+### Spring Dependencies
+- spring-boot-starter-web
+- spring-boot-starter-jdbc
+- spring-boot-starter-security (optional)
+  or
+- cds-starter-spring-boot-odata ( comes with protocol adapter )
 
-Now, that you’re familiar with how to configure your application, start to create your own application configuration. See the full list of CDS properties as a reference.
+### Consuming /Spring features
+- https://cap.cloud.sap/docs/java/development/#spring-features
+
+### Spring boot exposed beans which can be used with CDS 
+- https://cap.cloud.sap/docs/java/development/#exposed-beans
+- 
+
+## Building CAP Java Applications
+
+### Maven build options 
+- https://cap.cloud.sap/docs/java/development/#maven-build-options
+
+### Increased developer efficiency with Spring Boot Devtools
+- https://cap.cloud.sap/docs/java/development/#increased-developer-efficiency-with-spring-boot-devtools
+- explaisn how to use  Spring Boot Devtools
+### CDS Maven plugin
+- https://cap.cloud.sap/docs/java/development/#cds-maven-plugin
+
+### Local Development Support
+- https://cap.cloud.sap/docs/java/development/#local-development-support : It describes teh following 
+- CDS Watch for java
+- CDS auto Build
+
+## Testing Cap Java application 
+### Event Handler Layer Testing
+- https://cap.cloud.sap/docs/java/development/#event-handler-layer-testing
+
+### Service layer Testing 
+- https://cap.cloud.sap/docs/java/development/#service-layer-testing
+- Using CQN CRUD API
+- Esing emit API
+- Exception testing
+- 
+### API Integration Testing
+- https://cap.cloud.sap/docs/java/development/#api-integration-testing
+- We can uset using MockMVC
+
+## Messaging 
+- https://cap.cloud.sap/docs/java/messaging-foundation
+- 
+## Remote Service consumption 
+- https://cap.cloud.sap/docs/java/remote-services
+- Destination configuration
+  - https://cap.cloud.sap/docs/java/remote-services#register-destinations ( Oauth 2, Token forwarding..) 
