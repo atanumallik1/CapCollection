@@ -162,8 +162,51 @@ The currently active ChangeSet Context can be accessed from the Event Context: `
   -  Ref: https://cap.cloud.sap/docs/java/changeset-contexts#setting-session-context-variables 
 
 
+## Request Contexts
+Request Contexts span the execution of multiple events on (different) services. They provide a common context to these events, by providing user or tenant information or access to headers or query parameter.
+- Ref: https://cap.cloud.sap/docs/java/request-contexts
+
+### Reading Request Contexts
+The Request Context provides information about the request's parameters as well as the current user:
+
+- UserInfo: Exposes an API to fetch data of the (authenticated) user such as the logon name, id, CAP roles, and the tenant.
+- ParameterInfo: Exposes an API to retrieve additional request data such as header values, query parameters, and the locale.
+- AuthenticationInfo: Exposes an API to retrieve the authentication claims according to the authentication strategy. Can be used for user propagation.
+- FeatureTogglesInfo: Exposes an API to retrieve activated feature toggles of the request.
+- In addition, it provides access to the CDS model, which specifically can be dependent on tenant information or feature toggles.
+
+
+### Defining Request Contexts
+The CAP Java SDK allows you to create new Request Contexts and define their scope. This helps you to control, which set of parameters is used when events are processed by services. To manually add, modify or reset specific attributes within the scope of a new Request Context, you can use the RequestContextRunner API.
+
+Refer to [this](https://cap.cloud.sap/docs/java/request-contexts#defining-requestcontext) for details
   
+### Registering Global Providers
 
+Refer to : https://cap.cloud.sap/docs/java/request-contexts#global-providers
 
+## Handling Errors
+- https://cap.cloud.sap/docs/java/indicating-errors
+- Go thorugh it for more details
 
+## Configuring endpoints for different Protocol
+- https://cap.cloud.sap/docs/java/application-services#configure-endpoints
+  
+With the annotations @endpoints.path and @endpoints.protocol, you can provide more complex service endpoint configurations. Use them to serve an application service on different paths for different protocols. The value of @endpoints.path is appended to the protocol adapter's base path.
+
+In the following example, the service CatalogService is available on different paths for the different OData protocols:
+
+````
+@endpoints: [
+  {path : 'browse', protocol: 'odata-v4'},
+  {path : 'list', protocol: 'odata-v2'}
+]
+service CatalogService {
+    ...
+}
+````
+
+The CatalogService is accessible on the combined path /odata/v4/browse with the OData V4 protocol and on /odata/v2/list with the OData V2 protocol.
+
+The same can also be configured in the application.yaml.
   
