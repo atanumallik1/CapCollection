@@ -237,4 +237,61 @@ service CatalogService {
 The CatalogService is accessible on the combined path /odata/v4/browse with the OData V4 protocol and on /odata/v2/list with the OData V2 protocol.
 
 The same can also be configured in the application.yaml.
-  
+
+## Persistence Service 
+- https://cap.cloud.sap/docs/java/persistence-services
+- The CAP Java SDK has built-in support for various databases. This section describes the different databases and any differences between them with respect to CAP features. There's out of the box support for SAP HANA with CAP currently as well as H2 and SQLite. However, it's important to note that H2 and SQLite aren't an enterprise grade database and are recommended for nonproductive use like local development or CI tests only. PostgreSQL is supported in addition, but has various limitations in comparison to SAP HANA, most notably in the area of schema evolution.
+- SAP HANA (Cloud)
+- PostgreSQL
+- H2 Database
+- SQLite
+### Datasources
+
+Java Applications usually connect to SQL databases through datasources (`java.sql.DataSource`). The CAP Java SDK can auto-configure datasources from service bindings and pick up datasources configured by Spring Boot. These datasources are used to create Persistence Services, which are CQN-based database clients.
+- Data Source configs . Here you can share Hana DB specific configs. 
+````
+cds:
+  dataSource:
+    my-service-instance:
+      hikari:
+        data-source-properties:
+          packetSize: 300000
+````   
+Look at this link for Datasource Configuration from here : https://cap.cloud.sap/docs/java/persistence-services#sap-hana
+
+
+## Working with CDS models (introspection APIs)
+- https://cap.cloud.sap/docs/java/reflection-api
+### Feature toggle 
+- https://cap.cloud.sap/docs/java/reflection-api#feature-toggles
+- 
+## CQL
+### Buinding CQL statements 
+- https://cap.cloud.sap/docs/java/query-api
+### Executing CQL statements 
+- https://cap.cloud.sap/docs/java/query-execution
+### Introspecting CQL statements 
+- https://cap.cloud.sap/docs/java/query-introspection
+- `CqnAnalyzer` , `CqnVisitor`
+- 
+## Working with Data 
+- https://cap.cloud.sap/docs/java/data
+### Types and Mapping 
+https://cap.cloud.sap/docs/java/data#predefined-types
+
+### Navigation and association 
+- https://cap.cloud.sap/docs/java/data#relationships-to-other-entities
+- Explains how to use queries using teh Data Object
+### CDS Data Object 
+- [CDS Data](https://cap.cloud.sap/docs/java/data#cds-data)
+- Serialization + Deserialization
+- [How to use Data in CQL ](https://cap.cloud.sap/docs/java/data#data-in-cds-query-language-cql)
+
+## Event Handler 
+- https://cap.cloud.sap/docs/java/provisioning-api
+- Standard handlers
+- Special Handler
+  - `HandlerOrder.LATE`
+ 
+## All about Servics
+- https://cap.cloud.sap/docs/java/consumption-api
