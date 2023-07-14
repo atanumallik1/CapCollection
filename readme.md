@@ -135,6 +135,12 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
     - Explicitly Defined Mock Users
   - Mock Tenants
   - Authorization
+    - Role-Based Authorization
+    - Instance-Based Authorization
+    - Enforcement API & Custom Handlers
+
+
+  
 
 
 
