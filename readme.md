@@ -191,8 +191,36 @@ Refer to : https://cap.cloud.sap/docs/java/request-contexts#global-providers
 
 ## Configuring endpoints for different Protocol
 - https://cap.cloud.sap/docs/java/application-services#configure-endpoints
+
+## Application Services
+- Link : https://cap.cloud.sap/docs/java/application-services#configure-endpoints
+
   
-With the annotations @endpoints.path and @endpoints.protocol, you can provide more complex service endpoint configurations. Use them to serve an application service on different paths for different protocols. The value of @endpoints.path is appended to the protocol adapter's base path.
+Application Services define the APIs that a CAP application exposes to its clients, for example through OData. This section describes how to add business logic to these services, by extending CRUD events and implementing actions and functions.
+- Handling CRUD Events
+- OData Requests
+- Deeply Structured Documents
+- Result Handling
+  - READ Result
+  - UPDATE and DELETE Results
+  - INSERT and UPSERT Results
+    - Result Builder
+  - Actions and Functions
+
+
+### Serve Configuration
+Configure how application services are served. You can define per service which ones are served by which protocol adapters. In addition, you configure on which path they are available. Finally, the combined path an application service is served on, is composed of the base path of a protocol adapter and the relative path of the application service.
+
+### Configure Base Path
+By default, the CAP Java SDK provides protocol adapters for OData V4 and V2 and the base paths of both can be configured with CDS Properties in the application.yaml:
+````
+cds:
+  odataV4.endpoint.path: '/api'
+  odataV2.endpoint.path: '/api-v2'
+````
+
+### Configure Path and Protocol  
+With the annotations `@endpoints.path` and `@endpoints.protocol`, you can provide more complex service endpoint configurations. Use them to serve an application service on different paths for different protocols. The value of @endpoints.path is appended to the protocol adapter's base path.
 
 In the following example, the service CatalogService is available on different paths for the different OData protocols:
 
