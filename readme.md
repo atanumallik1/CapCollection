@@ -53,3 +53,10 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
 - https://cap.cloud.sap/docs/java/auditlog
 
 ## Development 
+### Application Configuration
+- https://cap.cloud.sap/docs/java/development/#application-configuration
+- This section describes how to configure applications. CAP Java applications can fully leverage Spring Boot's capabilities for Externalized Configuration. This enables you to define multiple configuration profiles for different scenarios, like local development and cloud deployment.
+
+For a first introduction, have a look at our sample application and the configuration profiles we added there.
+
+Now, that you’re familiar with how to configure your application, start to create your own application configuration. See the full list of CDS properties as a reference.
