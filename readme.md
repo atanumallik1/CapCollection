@@ -45,3 +45,11 @@ Also refer to : https://github.com/atanumallik1/CAP-Learning
       select = select.lock();
       CqnSelect selectQuery = select.asSelect();
     ````  
+## Connecting to Secondary Data Source using CDSDataSourceConnector 
+- https://cap.cloud.sap/docs/java/advanced
+## Transactional Outbox 
+- https://cap.cloud.sap/docs/java/outbox
+## Audit Logging 
+- https://cap.cloud.sap/docs/java/auditlog
+
+## Development 
