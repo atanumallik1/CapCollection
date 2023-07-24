@@ -293,5 +293,9 @@ https://cap.cloud.sap/docs/java/data#predefined-types
 - Special Handler
   - `HandlerOrder.LATE`
  
-## All about Servics
+## All about Servic  Comsumption
 - https://cap.cloud.sap/docs/java/consumption-api
+
+
+## Authorization 
+- https://cap.cloud.sap/docs/guides/authorization#prerequisite-authentication
